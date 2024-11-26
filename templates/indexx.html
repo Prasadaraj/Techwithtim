@@ -1,0 +1,24 @@
+<h1>Hello World! <h1>
+<p>This is my first page!!!! </p>
+<p>This is {{first_name}} </p>
+<p>Topics covered are: capitalize, lower, upper, title, trim striptags, safe</p>
+<p>{{  stuff|title  }}</p>
+
+<h3>Favorite Pizza using 'for' statements</h3>
+{% for topping in favorite_pizza %}
+    {{ topping }}<br/>
+{% endfor %}
+
+<h3>using if statements to search for topping =41 so numerical values only </h3>
+{% for topping in favorite_pizza %}
+
+    {% if topping == 41 %}
+        {{ topping + 100 }}<br/>
+    {% else %}
+        {{ topping }}<br/>
+    {% endif %}
+{% endfor %}
+
+<br/><br/>
+<h3>Favorite ingredient</h3>
+{{favorite_pizza.0 }}

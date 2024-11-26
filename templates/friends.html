@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} {{ title }} {% endblock %}
+{%block content %}	
+	<div class="container">
+	    <h1>Friends</h1>
+	    <br/>
+	    <form action="/friends" METHOD="POST"> # methods need to be declared in @app.route
+		    <input type="text" placeholder="Name" name="name">
+		   <input type="submit" value="Add Name" class="btn btn-secondary">
+		</form>
+        <br/><br/>
+        {% for friend in friends%}        #for loop, as we add names progressively it will add to the list
+        <h4>
+            {{friend.name }}
+        </h4>
+	</div>	 
+{% endblock %}
